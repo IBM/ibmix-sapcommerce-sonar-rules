@@ -4,7 +4,7 @@
 
   <groupId>at.ibmix.sonarqube</groupId>
   <artifactId>sapcx-java-rules</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0</version>
   <packaging>sonar-plugin</packaging>
   <name>IBM iX - SAP Commerce Custom rules</name>
   <description>Custom SAP Commerce rules to improve code quality</description>
@@ -36,7 +36,7 @@
     <connection>scm:git:git@github.com:IBM/ibmix-sapcommerce-sonar-rules.git</connection>
     <developerConnection>scm:git:git@github.com:IBM/ibmix-sapcommerce-sonar-rules.git</developerConnection>
     <url>https://github.com/IBM/ibmix-sapcommerce-sonar-rules</url>
-    <tag>HEAD</tag>
+    <tag>v1.0</tag>
   </scm>
 
   <dependencies>
