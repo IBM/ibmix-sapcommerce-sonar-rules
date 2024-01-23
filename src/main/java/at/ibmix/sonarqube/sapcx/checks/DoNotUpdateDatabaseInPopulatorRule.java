@@ -3,8 +3,6 @@ package at.ibmix.sonarqube.sapcx.checks;
 import java.util.Optional;
 import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.semantic.MethodMatchers;
-import org.sonar.plugins.java.api.semantic.Type;
-import org.sonar.plugins.java.api.tree.AnnotationTree;
 import org.sonar.plugins.java.api.tree.ClassTree;
 import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 import org.sonar.plugins.java.api.tree.Tree;
