@@ -2,3 +2,7 @@
 target/
 *.iml
 dependency-reduced-pom.xml
+/pom.xml.next
+/pom.xml.releaseBackup
+/pom.xml.tag
+/release.properties
