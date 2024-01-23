@@ -1,0 +1,31 @@
+<p>Changing the session context to another user can expose data.
+This is fine to use in an automatic context like cronjobs but should be avoided for actions triggered by a user.
+<br/>Check if really needed and no exploit is possible</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+public void doSomething()
+{
+    sessionService.executeInLocalView(new SessionExecutionBody() // Noncompliant
+    {
+        @Override
+        public Object execute()
+        {
+            //Unsecure code
+        }
+    }, userService.getAdminUser());
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+public void doSomething()
+{
+    sessionService.executeInLocalView(new SessionExecutionBody() // Compliant
+    {
+        @Override
+        public Object execute()
+        {
+            //Secure code
+        }
+    });
+}
+</pre>

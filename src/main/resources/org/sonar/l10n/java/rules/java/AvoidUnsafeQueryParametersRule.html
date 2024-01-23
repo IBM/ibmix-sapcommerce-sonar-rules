@@ -1,0 +1,44 @@
+<p>Using dynamic values in your query string can enable SQL injection.
+Please ensure the query cannot be manipulated by user inputs.
+<br/>It is always better to use query parameters instead.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+public void doSomethingWrong(final String uid)
+{
+    final FlexibleSearchQuery fQuery = new FlexibleSearchQuery("SELECT * FROM {User} WHERE {p.uid} = " + uid);  // Noncompliant
+    flexibleSearchService.searchUnique(fQuery);
+}
+
+public void doSomethingWrong2(final String uid)
+{
+    final FlexibleSearchQuery fQuery = new FlexibleSearchQuery("SELECT * FROM {User} WHERE {p.uid} = " + String.format(uid, "test"));  // Noncompliant
+    flexibleSearchService.searchUnique(fQuery);
+}
+
+public void doSomethingWrong3(final String uid)
+{
+    final FlexibleSearchQuery fQuery = new FlexibleSearchQuery("SELECT * FROM {User} WHERE {p.uid} = " + String.format(uid, "test") + " and 1=1");  // Noncompliant
+    flexibleSearchService.searchUnique(fQuery);
+}
+
+public void doSomethingWrong4(final String uid)
+{
+    String query = "SELECT * FROM {User} WHERE {p.uid} = ";
+    final FlexibleSearchQuery fQuery = new FlexibleSearchQuery(String.format(QUERY, uid));  // Noncompliant
+    flexibleSearchService.searchUnique(fQuery);
+}
+
+public void doSomethingWrong5(final String uid)
+{
+    flexibleSearchService.search("SELECT * FROM {User} WHERE {p.uid} = " + uid);  // Noncompliant
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+public void doSomething(final String uid)
+{
+    final FlexibleSearchQuery fQuery = new FlexibleSearchQuery("SELECT * FROM {User} WHERE {p.uid} = ?uid");  // Compliant
+    fQuery.addQueryParameter("uid", uid);
+    flexibleSearchService.searchUnique(fQuery);
+}
+</pre>

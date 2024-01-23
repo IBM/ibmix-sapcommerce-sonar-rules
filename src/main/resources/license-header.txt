@@ -1,0 +1,2 @@
+Copyright (C) 2023-present IBM Corporation - bernhard.wimmer@ibmix.at
+This code is released under [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) license.

@@ -1,0 +1,21 @@
+<p>Populators should not save model data.
+<br/>Use populators to transform your data and not for database operations</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+@Component
+public class CustomerPopulator implements Populator<UserModel, CustomerData>
+{
+    @Autowired
+    private ModelService modelService;
+
+    @Override
+    public void populate(final UserModel source, final CustomerData target)
+    {
+        ...
+        modelService.save(source); // Noncompliant
+        modelService.saveAll(Arrays.asList(source)); // Noncompliant
+        modelService.remove(source); // Noncompliant
+        modelService.removeAll(Arrays.asList(source)); // Noncompliant
+    }
+}
+</pre>

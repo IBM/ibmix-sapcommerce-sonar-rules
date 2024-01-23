@@ -1,0 +1,14 @@
+{
+  "title": "Do not use SAP Commerce datasource directly",
+  "type": "VULNERABILITY",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "10min"
+  },
+  "tags": [
+    "sapcx"
+  ],
+  "defaultSeverity": "Major",
+  "sqKey": "CX4"
+}

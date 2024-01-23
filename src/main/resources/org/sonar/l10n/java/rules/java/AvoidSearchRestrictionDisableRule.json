@@ -1,0 +1,22 @@
+{
+  "title": "Review SAP Commerce search restrictions disable",
+  "type": "SECURITY_HOTSPOT",
+  "code": {
+    "impacts": {
+      "SECURITY": "HIGH"
+    },
+    "attribute": "COMPLETE"
+  },
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "15min"
+  },
+  "tags": [
+    "sapcx",
+    "security-sensitive"
+  ],
+  "defaultSeverity": "Major",
+  "sqKey": "CX1",
+  "quickfix": "unknown"
+}

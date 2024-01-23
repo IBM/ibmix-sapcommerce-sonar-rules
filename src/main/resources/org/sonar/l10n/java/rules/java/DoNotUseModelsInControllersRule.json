@@ -1,0 +1,14 @@
+{
+  "title": "Do not use entity models in controllers",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "15min"
+  },
+  "tags": [
+    "sapcx"
+  ],
+  "defaultSeverity": "Major",
+  "sqKey": "CX6"
+}

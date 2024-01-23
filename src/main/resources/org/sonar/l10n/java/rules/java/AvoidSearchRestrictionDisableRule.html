@@ -1,0 +1,18 @@
+<p>Disabling search restrictions can expose sensible data.
+This is fine to use in an automatic context like cronjobs but should be avoided for actions triggered by a user.
+<br/>Double check that its fine if needed.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+public void doSomething()
+{
+    searchRestrictionService.disableSearchRestrictions(); // Noncompliant
+    productDAO.find(restrictedProduct);
+}
+
+public void doSomething2()
+{
+    final FlexibleSearchQuery fQuery = new FlexibleSearchQuery("SELECT {passwd} FROM {User}");
+    fQuery.setDisableSearchRestrictions(true); // Noncompliant
+    flexibleSearchService.searchUnique(fQuery);
+}
+</pre>

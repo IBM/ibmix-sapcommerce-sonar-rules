@@ -1,0 +1,37 @@
+<p>Use of entity models should be avoided in controllers, use DTOs instead.
+<br/>In addition returning complete or parts of entity models as response body can expose more data than intended.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+@GetMapping
+public String profilePage(final Model model) throws CMSItemNotFoundException
+{
+    CustomerModel customer = customerDAO.getCustomerByUID(facade.getCurrentUserID()); // Noncompliant
+    model.addAttribute("user", customer);
+    return getViewForPage(model);
+}
+
+@GetMapping
+@ResponseBody
+public CustomerModel getCustomer()
+{
+    return customerDAO.getCustomerByUID(facade.getCurrentUserID()); // Noncompliant
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+@GetMapping
+public String profilePage(final Model model) throws CMSItemNotFoundException
+{
+    CustomerData customer = customerFacade.getCurrentCustomer(); // Noncompliant
+    model.addAttribute("user", customer);
+    return getViewForPage(model);
+}
+
+@GetMapping
+@ResponseBody
+public CustomerData getCustomer()
+{
+    CustomerData customer = customerFacade.getCurrentCustomer(); // Compliant
+    return customer;
+}
+</pre>

@@ -1,0 +1,15 @@
+<p>Entity models have to be created using modelService.create()</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+public void doSomething()
+{
+    UserModel user = new UserModel(); // Noncompliant
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+public void doSomethingElse()
+{
+    UserModel user = modelService.create(UserModel.class); // Compliant
+}
+</pre>

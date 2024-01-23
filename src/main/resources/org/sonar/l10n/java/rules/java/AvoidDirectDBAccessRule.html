@@ -1,0 +1,18 @@
+<p>Do not use the SAP Commerce datasource directly. Use flexiblesearch instead.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+public void doSomething()
+{
+    Connection con = Registry.getCurrentTenant().getDataSource().getConnection(true); // Noncompliant
+    con.prepareCall("SELECT * FROM users WHERE P_UID = 'admin'");
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+public void doSomethingElse()
+{
+    final FlexibleSearchQuery fQuery = new FlexibleSearchQuery("SELECT * FROM {User} WHERE {p.uid} = ?uid");
+    fQuery.addQueryParameter("uid", "admin");
+    flexibleSearchService.searchUnique(fQuery); // Compliant
+}
+</pre>
