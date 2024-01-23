@@ -22,6 +22,23 @@
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
 
+  <organization>
+    <name>IBM iX</name>
+    <url>https://www.ibm.com/services/ibmix</url>
+  </organization>
+
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/IBM/ibmix-sapcommerce-sonar-rules/issues</url>
+  </issueManagement>
+
+  <scm>
+    <connection>scm:git:git@github.com:IBM/ibmix-sapcommerce-sonar-rules.git</connection>
+    <developerConnection>scm:git:git@github.com:IBM/ibmix-sapcommerce-sonar-rules.git</developerConnection>
+    <url>https://github.com/IBM/ibmix-sapcommerce-sonar-rules</url>
+    <tag>HEAD</tag>
+  </scm>
+
   <dependencies>
     <!-- MAIN sources dependencies -->
     <dependency>
