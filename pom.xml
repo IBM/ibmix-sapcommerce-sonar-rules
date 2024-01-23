@@ -4,7 +4,7 @@
 
   <groupId>at.ibmix.sonarqube</groupId>
   <artifactId>sapcx-java-rules</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0</version>
   <packaging>sonar-plugin</packaging>
   <name>IBM iX - SAP Commerce Custom rules</name>
   <description>Custom SAP Commerce rules to improve code quality</description>
@@ -21,6 +21,23 @@
     <sonar.organization>ibm-ix</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
+
+  <organization>
+    <name>IBM iX</name>
+    <url>https://www.ibm.com/services/ibmix</url>
+  </organization>
+
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/IBM/ibmix-sapcommerce-sonar-rules/issues</url>
+  </issueManagement>
+
+  <scm>
+    <connection>scm:git:git@github.com:IBM/ibmix-sapcommerce-sonar-rules.git</connection>
+    <developerConnection>scm:git:git@github.com:IBM/ibmix-sapcommerce-sonar-rules.git</developerConnection>
+    <url>https://github.com/IBM/ibmix-sapcommerce-sonar-rules</url>
+    <tag>v1.0</tag>
+  </scm>
 
   <dependencies>
     <!-- MAIN sources dependencies -->
@@ -100,6 +117,19 @@
           <skipDependenciesPackaging>true</skipDependenciesPackaging>
           <sonarQubeMinVersion>8.9</sonarQubeMinVersion>
           <requirePlugins>java:${sonarjava.version}</requirePlugins>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+          <systemProperties>
+            <property>
+              <name>hybrisHome</name>
+              <value>${HYBRIS_HOME}</value>
+            </property>
+          </systemProperties>
         </configuration>
       </plugin>
 

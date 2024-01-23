@@ -2,6 +2,7 @@
 
 IBM iX - SAP Commerce Sonar Rules
 =======
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ibmix-sapcommerce-sonar-rules&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ibmix-aem-sonar-rules)
 
 ### Summary
 Sonarqube Plugin containing custom rules and security hotspots for SAP Commerce development.
