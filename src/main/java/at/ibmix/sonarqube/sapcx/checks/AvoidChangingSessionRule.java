@@ -26,6 +26,6 @@ public class AvoidChangingSessionRule extends AbstractMethodDetection
     @Override
     public void onMethodInvocationFound(final MethodInvocationTree tree)
     {
-        this.reportIssue(tree, "Review change of SAP Commerce user context");
+        this.reportIssue(tree, "Make sure that changing SAP Commerce user context is safe here");
     }
 }

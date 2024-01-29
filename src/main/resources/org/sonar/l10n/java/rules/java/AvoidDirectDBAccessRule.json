@@ -1,14 +1,21 @@
 {
   "title": "Do not use SAP Commerce datasource directly",
-  "type": "VULNERABILITY",
+  "type": "CODE_SMELL",
+  "code": {
+    "impacts": {
+      "MAINTAINABILITY": "HIGH"
+    },
+    "attribute": "CONVENTIONAL"
+  },
   "status": "ready",
   "remediation": {
     "func": "Constant\/Issue",
-    "constantCost": "10min"
+    "constantCost": "20min"
   },
+  "scope": "Main",
   "tags": [
-    "sapcx"
+    "sapcommerce"
   ],
-  "defaultSeverity": "Major",
-  "sqKey": "CX4"
+  "defaultSeverity": "Critical",
+  "sqKey": "IBMIXSAP4"
 }

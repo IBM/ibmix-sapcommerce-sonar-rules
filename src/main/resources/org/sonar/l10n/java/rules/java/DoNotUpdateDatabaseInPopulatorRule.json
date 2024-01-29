@@ -1,14 +1,21 @@
 {
   "title": "Do not update database in populators",
   "type": "CODE_SMELL",
+  "code": {
+    "impacts": {
+      "MAINTAINABILITY": "MEDIUM"
+    },
+    "attribute": "CONVENTIONAL"
+  },
   "status": "ready",
   "remediation": {
     "func": "Constant\/Issue",
     "constantCost": "15min"
   },
+  "scope": "Main",
   "tags": [
-    "sapcx"
+    "sapcommerce"
   ],
   "defaultSeverity": "Major",
-  "sqKey": "CX7"
+  "sqKey": "IBMIXSAP7"
 }

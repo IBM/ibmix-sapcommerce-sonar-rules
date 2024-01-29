@@ -1,22 +1,34 @@
 {
-  "title": "Review SAP Commerce search restrictions disable",
+  "title": "Disabling SAP Commerce search restrictions is security-sensitive",
   "type": "SECURITY_HOTSPOT",
   "code": {
     "impacts": {
-      "SECURITY": "HIGH"
+      "SECURITY": "MEDIUM"
     },
-    "attribute": "COMPLETE"
+    "attribute": "TRUSTWORTHY"
   },
+  "scope": "Main",
   "status": "ready",
   "remediation": {
     "func": "Constant\/Issue",
     "constantCost": "15min"
   },
   "tags": [
-    "sapcx",
-    "security-sensitive"
+    "sapcommerce",
+    "cwe"
   ],
+  "securityStandards": {
+    "CWE": [
+      200,
+      497
+    ],
+    "OWASP": [
+      "A1"
+    ],
+    "OWASP Top 10 2021": [
+      "A1"
+    ]
+  },
   "defaultSeverity": "Major",
-  "sqKey": "CX1",
-  "quickfix": "unknown"
+  "sqKey": "IBMIXSAP1"
 }

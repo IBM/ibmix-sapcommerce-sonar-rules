@@ -30,7 +30,7 @@ public class AvoidSearchRestrictionDisableRule extends AbstractMethodDetection
     {
         if (tree.methodSymbol().name().equals(METHOD_NAME) || this.isSetToTrue(tree))
         {
-            this.reportIssue(tree, "Review disable of SAP Commerce search restrictions");
+            this.reportIssue(tree, "Make sure that disabling SAP Commerce search restrictions is safe here");
         }
     }
 

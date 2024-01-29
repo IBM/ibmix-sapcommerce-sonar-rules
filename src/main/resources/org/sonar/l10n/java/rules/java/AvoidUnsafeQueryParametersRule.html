@@ -1,6 +1,11 @@
 <p>Using dynamic values in your query string can enable SQL injection.
 Please ensure the query cannot be manipulated by user inputs.
 <br/>It is always better to use query parameters instead.</p>
+<h2>Ask Yourself Whether</h2>
+<ul>
+    <li> Can this be done with query parameters? </li>
+    <li> Can the parameter be manipulated in any way by a user? </li>
+</ul>
 <h2>Noncompliant Code Example</h2>
 <pre>
 public void doSomethingWrong(final String uid)
@@ -33,6 +38,10 @@ public void doSomethingWrong5(final String uid)
     flexibleSearchService.search("SELECT * FROM {User} WHERE {p.uid} = " + uid);  // Noncompliant
 }
 </pre>
+<h2>Recommended Secure Coding Practices</h2>
+Use query parameters wherever possible.</br>
+In special cases where query parameters are not possible consider introducing a list of allowed values.</br>
+e.g. for lists "WHERE property IN ("val1","val2")"
 <h2>Compliant Solution</h2>
 <pre>
 public void doSomething(final String uid)
@@ -42,3 +51,8 @@ public void doSomething(final String uid)
     flexibleSearchService.searchUnique(fQuery);
 }
 </pre>
+<h2>See</h2>
+<ul>
+    <li> <a href="https://owasp.org/Top10/A03_2021-Injection">OWASP Top 10 2021 Category A3</a> - Injection</li>
+    <li> <a href="https://cwe.mitre.org/data/definitions/89.html">MITRE, CWE-89</a> - SQL Injection</li>
+</ul>
