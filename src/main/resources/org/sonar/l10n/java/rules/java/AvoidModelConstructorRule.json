@@ -14,7 +14,8 @@
   },
   "scope": "Main",
   "tags": [
-    "sapcommerce"
+    "sapcommerce",
+    "suspicious"
   ],
   "defaultSeverity": "Major",
   "sqKey": "IBMIXSAP3"

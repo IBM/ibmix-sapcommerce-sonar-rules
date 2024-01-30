@@ -15,7 +15,8 @@
   },
   "tags": [
     "sapcommerce",
-    "cwe"
+    "cwe",
+    "owasp"
   ],
   "securityStandards": {
     "CWE": [

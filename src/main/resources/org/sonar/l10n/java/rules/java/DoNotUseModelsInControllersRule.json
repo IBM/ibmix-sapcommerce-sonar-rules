@@ -14,7 +14,8 @@
   },
   "scope": "Main",
   "tags": [
-    "sapcommerce"
+    "sapcommerce",
+    "bad-practice"
   ],
   "defaultSeverity": "Major",
   "sqKey": "IBMIXSAP6"
