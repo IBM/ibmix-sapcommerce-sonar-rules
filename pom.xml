@@ -116,7 +116,6 @@
           <sonarLintSupported>true</sonarLintSupported>
           <skipDependenciesPackaging>true</skipDependenciesPackaging>
           <sonarQubeMinVersion>8.9</sonarQubeMinVersion>
-          <requirePlugins>java:${sonarjava.version}</requirePlugins>
         </configuration>
       </plugin>
       <plugin>
