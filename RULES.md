@@ -34,15 +34,6 @@ public void doSomethingWrong(final String uid)
     flexibleSearchService.searchUnique(fQuery);
 }
 ```
-### Vulnerabilities
-* Do not use SAP Commerce datasource directly
-```
-public void doSomething()
-{
-    Connection con = Registry.getCurrentTenant().getDataSource().getConnection(true); // Noncompliant
-    con.prepareCall("SELECT * FROM users WHERE P_UID = 'admin'");
-}
-```
 ### Bugs
 * SAP Commerce do not use constructor on entity models
 ```
@@ -52,6 +43,14 @@ public void doSomething()
 }
 ```
 ### Code Smells
+* Do not use SAP Commerce datasource directly
+```
+public void doSomething()
+{
+    Connection con = Registry.getCurrentTenant().getDataSource().getConnection(true); // Noncompliant
+    con.prepareCall("SELECT * FROM users WHERE P_UID = 'admin'");
+}
+```
 * Do not use entity models in controllers
 ```
 @GetMapping

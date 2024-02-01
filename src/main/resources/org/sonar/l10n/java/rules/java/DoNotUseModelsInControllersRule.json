@@ -1,14 +1,22 @@
 {
   "title": "Do not use entity models in controllers",
   "type": "CODE_SMELL",
+  "code": {
+    "impacts": {
+      "MAINTAINABILITY": "MEDIUM"
+    },
+    "attribute": "CONVENTIONAL"
+  },
   "status": "ready",
   "remediation": {
     "func": "Constant\/Issue",
     "constantCost": "15min"
   },
+  "scope": "Main",
   "tags": [
-    "sapcx"
+    "sapcommerce",
+    "bad-practice"
   ],
   "defaultSeverity": "Major",
-  "sqKey": "CX6"
+  "sqKey": "IBMIXSAP6"
 }

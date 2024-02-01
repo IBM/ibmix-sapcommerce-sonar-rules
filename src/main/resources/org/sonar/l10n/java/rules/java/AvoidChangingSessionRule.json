@@ -1,22 +1,35 @@
 {
-  "title": "Review change of SAP Commerce session context",
+  "title": "Change of SAP Commerce session context is security-sensitive",
   "type": "SECURITY_HOTSPOT",
   "code": {
     "impacts": {
-      "SECURITY": "HIGH"
+      "SECURITY": "MEDIUM"
     },
-    "attribute": "COMPLETE"
+    "attribute": "TRUSTWORTHY"
   },
+  "scope": "Main",
   "status": "ready",
   "remediation": {
     "func": "Constant\/Issue",
     "constantCost": "15min"
   },
   "tags": [
-    "sapcx",
-    "security-sensitive"
+    "sapcommerce",
+    "cwe",
+    "owasp"
   ],
+  "securityStandards": {
+    "CWE": [
+      200,
+      497
+    ],
+    "OWASP": [
+      "A1"
+    ],
+    "OWASP Top 10 2021": [
+      "A1"
+    ]
+  },
   "defaultSeverity": "Major",
-  "sqKey": "CX2",
-  "quickfix": "unknown"
+  "sqKey": "IBMIXSAP2"
 }

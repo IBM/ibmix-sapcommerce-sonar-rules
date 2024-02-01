@@ -32,7 +32,7 @@ public class AvoidUnsafeQueryParametersRule extends AbstractMethodDetection
                 && !tree.arguments().get(0).is(Tree.Kind.IDENTIFIER) // Prevent false positive if whole query is passed
                 && this.hasDynamicValueInArgument(tree.arguments().get(0)))
         {
-            context.reportIssue(this, tree, "Review use of dynamic variables in your flexible search query string");
+            context.reportIssue(this, tree, "Make sure that using dynamic variables in your flexible search query string is safe here");
         }
     }
 

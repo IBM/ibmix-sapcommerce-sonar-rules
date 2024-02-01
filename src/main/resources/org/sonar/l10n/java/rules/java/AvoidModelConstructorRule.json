@@ -1,14 +1,22 @@
 {
   "title": "SAP Commerce do not use constructor on entity models",
   "type": "BUG",
+  "code": {
+    "impacts": {
+      "RELIABILITY": "HIGH"
+    },
+    "attribute": "LOGICAL"
+  },
   "status": "ready",
   "remediation": {
     "func": "Constant\/Issue",
     "constantCost": "5min"
   },
+  "scope": "Main",
   "tags": [
-    "sapcx"
+    "sapcommerce",
+    "suspicious"
   ],
   "defaultSeverity": "Major",
-  "sqKey": "CX3"
+  "sqKey": "IBMIXSAP3"
 }
